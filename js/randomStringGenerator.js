@@ -8,41 +8,36 @@
     passController.$inject = ['$scope', 'passwordService'];
     
     function passController($scope, passwordService){
-        var password = this;
-        $scope.len = 8; // taking the default size to be 8
-        $scope.check = '';
+        $scope.len=8;
 
-        if($scope.check.length>0){
-            $scope.password =  passwordService.getRandomPassword($scope.len, $scope.check);
-        }else{
-            $scope.passwrd =  passwordService.getRandomPassword(size);
-        }
+        $scope.getNewKey = function(){
+            $scope.keyPass = passwordService.getRandomPassword($scope.len, $scope.check);
+        };
 
     };
 
     function passwordService(){
         var service = this;
-        var randomstring = require("randomstring");
-
-        service.getRandomPassword = function(){
-            return randomstring.generate();
-        }
-
-        service.getRandomPassword = function(size){
-            return randomstring.generate(size);
-        }
+        //var randomstring = require("randomstring");
+        var text = "";
+        var temp1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";   // alphanumeric
+        var temp2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";             // alphabetic
+        var temp3 = "0123456789";                                                       // numeric
+        var temp4 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$*!";   // special characters
 
         service.getRandomPassword = function(size, format){
-            return randomstring.generate({
-                length: size,
-                charset: format
-            });
-        }
+            text = "";
+            var temp="";
+            if(format==="alphanumeric") temp = temp1;
+            else if(format==="alphabetic") temp = temp2;
+            else if(format==="numeric") temp = temp3;
+            else if(format==="custom") temp = temp4;
+            else temp = temp1;
 
-         service.getRandomPassword = function(format){
-            return randomstring.generate({
-                charset: format
-            });
+            for(var i=0; i<size; i++)
+                text += temp.charAt(Math.floor(Math.random() * temp.length));
+
+            return text;
         }
     };
 
