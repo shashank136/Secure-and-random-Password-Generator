@@ -4,6 +4,8 @@
 	<title>Secure Password Generator</title>
 	<script type="text/javascript" src="../js/angular.min.js"></script>
 	<script type="text/javascript" src="../js/randomStringGenerator.js"></script>
+	<script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
+	<script type="text/javascript" src="../js/ngclipboard.min.js"></script>
 </head>
 <body ng-app="passwordApp">
 	<h1>Generate Password</h1>
@@ -22,7 +24,10 @@
 			<!-- <br>
 			<button ng-click="passKey">Click Me!</button> -->
 			<br>
-			Secure Password Generated: <input type="text" ng-model="keyPass" ">
+			Secure Password Generated: <input id="secret" type="text" ng-model="keyPass">
+			<button class="btn" ngclipboard data-clipboard-target="#secret">
+				<img src="../res/img/Clippy.svg" alt="Copy to clipboard">
+			</button>
 		</div>
 	</div>
 </body>

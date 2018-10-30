@@ -13,6 +13,7 @@ Works through browser plug-ins
 3) Generate password of your required length with and without special characters of your wish.
 4) works through browser extension.
 
+### Using [ngclipboard](https://sachinchoolur.github.io/ngclipboard/) for adding the copy to clipboard feature.
 
 ## Adding Support for plug-in in firefox & Chrome browser
 

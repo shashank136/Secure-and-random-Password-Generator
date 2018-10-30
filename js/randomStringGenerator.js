@@ -1,7 +1,7 @@
 (function(){
     'use strict';
 
-    angular.module('passwordApp', [])
+    angular.module('passwordApp', ['ngclipboard'])
             .controller('passController', passController)
             .service('passwordService', passwordService);
 
