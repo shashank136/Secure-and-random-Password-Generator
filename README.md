@@ -6,10 +6,17 @@ Protect passwords with 3 levels of best encryption techniques applied to safe gu
 
 Works through browser plug-ins
 
+## Features:
 
-# Adding Support for plug-in in firefox browser
+1) Feature to generate secure-random password in various formats.
+2) Ability to save the password securly and provide them during sing-in or log-in.
+3) Generate password of your required length with and without special characters of your wish.
+4) works through browser extension.
 
-# steps:
+
+## Adding Support for plug-in in firefox browser
+
+### steps:
 
 1) Add a manifest.json file in the root directory of project
 2) Inside manifest.json add the following code
