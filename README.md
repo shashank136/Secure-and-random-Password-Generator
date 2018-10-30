@@ -14,19 +14,19 @@ Works through browser plug-ins
 1) Add a manifest.json file in the root directory of project
 2) Inside manifest.json add the following code
 
-#	{
-#		"manifest_version":2,
-#		"name": "SecureKey",
-#		"version": "1.0.0",
-#		"icon": {
-#			"48": "res/img/icon.png"
-#		},
-#		"browser_action": {
-#			"default_icon": "res/img/icon.png",
-#			"default_title": "Secure Key",
-#			"default_popup": "html/index.html"
-#		}
-#	}
+	{
+		"manifest_version":2,
+		"name": "SecureKey",
+		"version": "1.0.0",
+		"icon": {
+			"48": "res/img/icon.png"
+		},
+		"browser_action": {
+			"default_icon": "res/img/icon.png",
+			"default_title": "Secure Key",
+			"default_popup": "html/index.html"
+		}
+	}
 	
 3) Make sure that manifest_version is 2.
 4) load the manifest.json file into the firefox from add:debugging(enter this in the address bar and hit enter) section by clicking on Load Temporary Add-on..
