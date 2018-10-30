@@ -14,6 +14,7 @@ Works through browser plug-ins
 4) works through browser extension.
 
 ### Using [ngclipboard](https://sachinchoolur.github.io/ngclipboard/) for adding the copy to clipboard feature.
+### Using [Bulma](https://bulma.io/) for CSS.
 
 ## Adding Support for plug-in in firefox & Chrome browser
 
