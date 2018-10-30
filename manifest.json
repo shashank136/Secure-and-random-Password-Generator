@@ -1,0 +1,13 @@
+{
+	"manifest_version":2,
+	"name": "SecureKey",
+	"version": "1.0.0",
+	"icon": {
+		"48": "res/img/icon.png"
+	},
+	"browser_action": {
+		"default_icon": "res/img/icon.png",
+		"default_title": "Secure Key",
+		"default_popup": "html/index.html"
+	}
+}
