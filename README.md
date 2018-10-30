@@ -32,3 +32,10 @@ Works through browser plug-ins
 	
 3) Make sure that manifest_version is 2.
 4) load the manifest.json file into the firefox from add:debugging(enter this in the address bar and hit enter) section by clicking on Load Temporary Add-on..
+5) For facility to access some browser information which is not available in a regular browser app, such as the ability to access an opened window and retrieve all of it’s opened tabs.
+
+```json
+	"permissions": ["tabs"]
+```
+
+Add the above code to your manifest.json file. Here you can request for range of permission from the user.
