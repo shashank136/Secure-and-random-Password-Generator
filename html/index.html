@@ -23,11 +23,7 @@
 							<input type="radio" ng-model="check" value="alphabetic" ng-change="getNewKey()">Alphabetic <br>
 							<input type="radio" ng-model="check" value="numeric" ng-change="getNewKey()">Numeric <br>
 							<input type="radio" ng-model="check" value="custom" ng-change="getNewKey()">+Special characters, Enter the special characters to include: <input type="text" ng-model="spike" ng-change="getNewKey()"> <br>
-							<input type="radio" ng-model="check" value="none" ng-change="getNewKey()">None<br>
 						</form>
-						
-							<!-- <br>
-							<button ng-click="passKey">Click Me!</button> -->
 						<br>
 						Secure Password Generated: <input id="secret" type="text" ng-model="keyPass">
 						<button class="btn" ngclipboard data-clipboard-target="#secret">

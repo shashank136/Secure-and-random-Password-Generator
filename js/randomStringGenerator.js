@@ -18,7 +18,6 @@
 
     function passwordService(){
         var service = this;
-        //var randomstring = require("randomstring");
         var text = "";
         var temp1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";   // alphanumeric
         var temp2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";             // alphabetic
@@ -31,7 +30,7 @@
             if(format==="alphanumeric") temp = temp1;
             else if(format==="alphabetic") temp = temp2;
             else if(format==="numeric") temp = temp3;
-            else if(format==="custom") {
+            else {
                 for(var i=0; i<size; i++){
                     if(i%3!=0)
                         text += temp1.charAt(Math.floor(Math.random() * temp1.length));
@@ -40,7 +39,6 @@
                 }
                 return text;
             }
-            else temp = temp1;
 
             for(var i=0; i<size; i++){
                 text += temp.charAt(Math.floor(Math.random() * temp.length));
