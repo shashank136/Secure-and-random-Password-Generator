@@ -19,6 +19,17 @@
                 $scope.keyPass = passwordService.getRandomPassword($scope.len, $scope.check, $scope.spike);
         };
 
+        $scope.repeatGenerate = function(){
+            if($scope.check){
+                if($scope.check==='custom')
+                    $scope.keyPass = passwordService.getRandomPassword($scope.len, $scope.check, $scope.spike);
+                else{
+                    $scope.spike="";
+                    $scope.keyPass = passwordService.getRandomPassword($scope.len, $scope.check, $scope.spike);
+                }
+            }              
+        };
+
     };
 
     function passwordService(){
