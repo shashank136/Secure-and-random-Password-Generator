@@ -41,10 +41,11 @@ Works through browser plug-ins
 	
 3) Make sure that manifest_version is 2.
 
-4) Loading local extension:
-	-Load the manifest.json file into the firefox from add:debugging(enter this in the address bar and hit enter) section by clicking on **Load Temporary Add-on**.
-	-If on **chrome browser** then visit chrome://extensions in your browser and ensure that the Developer mode checkbox in the top right-hand corner is checked.Click **Load unpacked extension** and select the directory in which your extension files live.
-	-In case of **Edge browser**visit **about:flags** and select the **Enable extension developer features** checkbox. Select More and select extension and load local extension.
+4) For plug-in firefox, load the manifest.json file into the firefox from add:debugging(enter this in the address bar and hit enter) section by clicking on **Load Temporary Add-on**.
+
+5) If on **chrome browser** then visit chrome://extensions in your browser and ensure that the Developer mode checkbox in the top right-hand corner is checked.Click **Load unpacked extension** and select the directory in which your extension files live.
+
+6)In case of **Edge browser**visit **about:flags** and select the **Enable extension developer features** checkbox. Select More and select extension and load local extension.
 
 5) For facility to access some browser information which is not available in a regular browser app, such as the ability to access an opened window and retrieve all of it’s opened tabs.
 
