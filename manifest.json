@@ -2,6 +2,7 @@
 	"manifest_version":2,
 	"name": "SecureKey",
 	"version": "1.0.0",
+	"author": "Shashank",
 	"icon": {
 		"48": "res/img/icon.png"
 	},
