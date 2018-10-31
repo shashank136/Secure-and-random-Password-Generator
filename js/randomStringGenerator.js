@@ -14,6 +14,11 @@
             $scope.keyPass = passwordService.getRandomPassword($scope.len, $scope.check, $scope.spike);
         };
 
+        $scope.getSpecialKey = function(){
+            if($scope.check==='custom')
+                $scope.keyPass = passwordService.getRandomPassword($scope.len, $scope.check, $scope.spike);
+        };
+
     };
 
     function passwordService(){
