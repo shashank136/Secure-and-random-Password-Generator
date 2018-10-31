@@ -28,6 +28,7 @@ Works through browser plug-ins
 		"manifest_version":2,
 		"name": "SecureKey",
 		"version": "1.0.0",
+		"suthor": "Shashank",
 		"icon": {
 			"48": "res/img/icon.png"
 		},
