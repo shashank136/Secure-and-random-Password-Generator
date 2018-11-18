@@ -12,9 +12,11 @@ Works through browser plug-ins
 2) Ability to save the password securly and provide them during sing-in or log-in.
 3) Generate password of your required length with and without special characters of your wish.
 4) works through browser extension.
+5) Provides password encryption using ACS algorithm.
 
 ### Using [ngclipboard](https://sachinchoolur.github.io/ngclipboard/) for adding the copy to clipboard feature.
 ### Using [Bulma](https://bulma.io/) for CSS.
+### Using [acs-js](https://www.npmjs.com/package/aes-js) for encryption (Still under improvement).
 
 ## Adding Support for plug-in in firefox, Chrome browser & Edge Browser
 
@@ -42,7 +44,7 @@ Works through browser plug-ins
 	
 3) Make sure that manifest_version is 2.
 
-4) For plug-in firefox, load the manifest.json file into the firefox from add:debugging(enter this in the address bar and hit enter) section by clicking on **Load Temporary Add-on**.
+4) For plug-in **firefox browser**, load the manifest.json file into the firefox from **about:debugging**(enter this in the address bar and hit enter) section by clicking on **Load Temporary Add-on**.
 
 5) If on **chrome browser** then visit chrome://extensions in your browser and ensure that the Developer mode checkbox in the top right-hand corner is checked.Click **Load unpacked extension** and select the directory in which your extension files live.
 
