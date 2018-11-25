@@ -16,7 +16,7 @@ Works through browser plug-ins
 
 ### Using [ngclipboard](https://sachinchoolur.github.io/ngclipboard/) for adding the copy to clipboard feature.
 ### Using [Bulma](https://bulma.io/) for CSS.
-### Using [acs-js](https://www.npmjs.com/package/aes-js) for encryption (Still under improvement).
+### Using [aes-js](https://www.npmjs.com/package/aes-js) for encryption (Still under improvement).
 
 ## Adding Support for plug-in in firefox, Chrome browser & Edge Browser
 
