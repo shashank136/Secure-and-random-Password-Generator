@@ -2,16 +2,26 @@
 <html lang="en">
 <head>
 	<title>Secure Password Generator</title>
-	<script type="text/javascript" src="../js/angular.min.js"></script>
-	<script type="text/javascript" src="../js/randomStringGenerator.js"></script>
-	<script type="text/javascript" src="../js/clipboard.min.js"></script>
-	<script type="text/javascript" src="../js/ngclipboard.min.js"></script>
-	<script type="text/javascript" src="../js/aes.js"></script>
+	<!-- public scirpt files-->
+	<script type="text/javascript" src="../js/common/angular.min.js"></script>
+	<script type="text/javascript" src="../js/common/clipboard.min.js"></script>
+	<script type="text/javascript" src="../js/common/ngclipboard.min.js"></script>
+	<!-- Main script files-->
+	<script type="text/javascript" src="../js/passwordApp.module.js"></script>
+	<script type="text/javascript" src="../js/core/password.service.js"></script>
+	<script type="text/javascript" src="../js/core/firebase.function.js"></script>
+	<script type="text/javascript" src="../js/core/pass.controller.js"></script>
+	<!-- Encryption algorithm -->
+	<script type="text/javascript" src="../js/common/aes.js"></script>
+	<!-- Firebase and Cloud Firestore libraries -->
+	<script type="text/javascript" src="../js/common/firebase-app.js"></script>
+	<script type="text/javascript" src="../js/common/firebase-firestore.js"></script>
+	<!-- Libraries for Bulma CSS -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body ng-app="passwordApp" class="block">
-	<artice class="message">
+	<article class="message">
 		<div class="container">
 			<div class="box">
 				<h1 class="message-header">Generate Password</h1><br>
@@ -27,13 +37,22 @@
 						</form>
 						<br>
 						Secure Password Generated: <input id="secret" type="text" ng-model="keyPass">
-						<button class="btn" ngclipboard data-clipboard-target="#secret">
+						<button class="btn" ngclipboard data-clipboard-target="#secret" ng-click="save()">
 							<img src="../res/img/Clippy.svg" alt="Copy to clipboard">
 						</button>
 						<button ng-click="repeatGenerate()">
 							<img src="../res/img/repeat.png" alt="get new passward">
 						</button>
 					</div>
+				</div>
+			</div>
+			<div class="box">
+				<h1 class="message-header">Get Password</h1><br>
+				<div ng-controller="passController">
+					Click to Copy the password: <input id="keyCopy" type="text" ng-model="getKey" ng-mouseup="getPassword()">
+					<button class="btn" ngclipboard data-clipboard-target="#keyCopy">
+						<img src="../res/img/Clippy.svg" alt="Copy to clipboard">
+					</button>
 				</div>
 			</div>
 		</div>

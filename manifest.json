@@ -10,5 +10,6 @@
 		"default_icon": "res/img/icon.png",
 		"default_title": "Secure Key",
 		"default_popup": "html/index.html"
-	}
+	},
+	"permissions": ["tabs"]
 }
