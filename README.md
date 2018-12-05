@@ -13,6 +13,7 @@ Works through browser plug-ins
 3) Generate password of your required length with and without special characters of your wish.
 4) works through browser extension.
 5) Provides password encryption using ACS algorithm.
+6) Using Google firestone NoSQL database.User need to have their own firebase account to run the project successfully.
 
 ### Using [ngclipboard](https://sachinchoolur.github.io/ngclipboard/) for adding the copy to clipboard feature.
 ### Using [Bulma](https://bulma.io/) for CSS.
@@ -57,3 +58,9 @@ Works through browser plug-ins
 ```
 
 Add the above code to your manifest.json file. Here you can request for range of permission from the user.
+
+## Configuring Google firebase for the project
+
+1) Create a google account and log into google firebase.
+2) Follow the instruction to create firestone database.[firestone](https://firebase.google.com/docs/firestore/quickstart?authuser=0).
+3) Keep in mind you need to start in test mode.
