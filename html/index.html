@@ -48,12 +48,16 @@
 			</div>
 			<div class="box">
 				<h1 class="message-header">Get Password</h1><br>
+				
 				<div ng-controller="passController">
-					Click to Copy the password: <input id="keyCopy" type="text" ng-model="getKey" ng-mouseup="getPassword()">
+					Click to Copy the password: <input id="keyCopy" type="text" ng-model="getKey" >
 					<button class="btn" ngclipboard data-clipboard-target="#keyCopy">
 						<img src="../res/img/Clippy.svg" alt="Copy to clipboard">
 					</button>
-				</div>
+				
+				<button ng-click="getPassword()">
+					Click Me!!!
+				</button></div>
 			</div>
 		</div>
 	</article>

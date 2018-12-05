@@ -55,7 +55,8 @@
         }
 
         service.decryptMe = function(encryptedHex){
-
+            console.log("here for decryption");
+            console.log(encryptedHex);
             var key = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
             // When ready to decrypt the hex string, convert it back to bytes

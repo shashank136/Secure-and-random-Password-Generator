@@ -38,17 +38,39 @@
             });
         }
 
-        service.getFromServer = function(webUrl){
+        service.getFromServer =  async function(webUrl){
         	
-        	db.collection("users").get().then((querySnapshot) => {
-                querySnapshot.forEach((doc) => {
-                	var temp = `${doc.data().websiteUrl}`;
-                	if(temp===webUrl){
-                		console.log(`${doc.data().EncryptedPassword}`);
-                		return `${doc.data().EncryptedPassword}`;
-                	}                 
+        	var result;
+        	var promise = await db.collection("users")
+        		.where("websiteUrl", "==", webUrl)
+        		.get() 	
+            	.then(function(querySnapshot){
+	            	querySnapshot.forEach(function(doc){
+	            		result = doc.data().EncryptedPassword;
+	            	});
+	            })
+	            .catch(function(error){
+	            	console.log("Error getting the details");
+	            });
+
+            return result;
+        }
+
+        service.checkWebsite = async function(webUrl){
+            var check = false;
+            var promise = await db.collection("users")
+                .where("websiteUrl", "==", webUrl)
+                .get()  
+                .then(function(querySnapshot){
+                    querySnapshot.forEach(function(doc){
+                        check = true;
+                    });
+                })
+                .catch(function(error){
+                    console.log("NO SUCH WEBSITE IN DB");
                 });
-            });
+
+            return check;
         }
 	};
 

@@ -32,14 +32,34 @@
         $scope.save = function(){           
 
             $scope.toSend = passwordService.encryptMe($scope.keyPass); // get the password to encrypt
+
+            // Check if url is already save in DB
+            async function checkKey(webUrl){
+                var sendMe;
+                var promise = await firebaseFunctions
+                .checkWebsite(webUrl)
+                .then(function(response){
+                    sendMe = response;
+                    console.log("succuess: "+response);
+                })
+                .catch(function(error){
+                    console.log("Something went wrong: "+promise.state);
+                });
+                return sendMe;
+            }
+
             // Get the URL of the website
-            function logTabs(tabs) {
+            async function logTabs(tabs) {
                 let tab = tabs[0]; 
                 var x = tab.url;
                 var r = /:\/\/(.[^/]+)/;
                 console.log(x.match(r)[1]);
                 $scope.webUrl = x.match(r)[1];
-                firebaseFunctions.pushToServer($scope.toSend, $scope.webUrl);
+                $scope.webCheck = await checkKey($scope.webUrl);
+                if($scope.webCheck===false)
+                    firebaseFunctions.pushToServer($scope.toSend, $scope.webUrl);
+                else
+                    alert("key already exists");
             }
 
             function onError(err) {
@@ -54,18 +74,32 @@
 
         $scope.getPassword = function(){
 
-        	var promise = firebaseFunctions.getFromServer("www.instagram.com");
-        	
-        	console.log(promise);
+        	async function getKey(webUrl){
+        		var sendMe;
+        		var promise = await firebaseFunctions
+                .getFromServer(webUrl)
+	        	.then(function(response){
+	        		sendMe = response;
+	        		console.log("succuess: "+response);
+	        	})
+	        	.catch(function(error){
+	        		console.log("Something went wrong: "+promise.state);
+	        	});
+	        	return sendMe;
+        	}
 
-        	function logTabs(tabs) {
+        	async function logTabs(tabs) {
                 let tab = tabs[0]; 
                 var x = tab.url;
                 var r = /:\/\/(.[^/]+)/;
-                console.log(x.match(r)[1]);
+
+                
                 $scope.webUrl = x.match(r)[1];
+                console.log("website: "+$scope.webUrl);
+                $scope.toSend = await getKey($scope.webUrl);
+
                 $scope.getKey = passwordService.decryptMe($scope.toSend);
-            	console.log("Decrypted password: "+$scope.decryptedKey);
+            	console.log("Decrypted password: "+$scope.getKey);
             }
 
             function onError(err) {
