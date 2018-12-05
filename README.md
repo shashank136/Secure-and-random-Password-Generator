@@ -64,3 +64,15 @@ Add the above code to your manifest.json file. Here you can request for range of
 1) Create a google account and log into google firebase.
 2) Follow the instruction to create firestone database.[firestone](https://firebase.google.com/docs/firestore/quickstart?authuser=0).
 3) Keep in mind you need to start in test mode.
+
+# HOW TO USE
+
+1) When you visit a website for first time or want to have an account on that website click the add for secure password.
+2) generate new radom password and copy it to clipboard for the website then navigate to the sign-up page.
+3) enter your details and the passowrd
+4) when revisiting the website then simply click the button ```Click Me!!```
+5) that will get the password for you.
+6) Click the copy to clipboard option till you see the text int the text box is selected and then close.
+7) Now you are ready to enjoy your login.
+
+## DON'T SHARE YOUR GOOGLE ACCOUNT PASSWORD WITH ANYONE, THAT IS THE ONLY PASSWORD YOU NEED FIRST TO RUN THE PROJECT AT LEAST.
