@@ -3,6 +3,9 @@ This is an opensource project to generate secure and random password for the use
 Works on multiple devices with sync facility.
 Protect passwords with 3 levels of best encryption techniques applied to safe guard the password and client details. 
 
+# Images:
+
+![Browser plug-in](https://github.com/shashank136/Secure-and-random-Password-Generator/blob/master/res/img/demo.png)
 
 Works through browser plug-ins
 
