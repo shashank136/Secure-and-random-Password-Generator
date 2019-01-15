@@ -5,11 +5,15 @@ Protect passwords with 3 levels of best encryption techniques applied to safe gu
 
 # Images:
 
-How the plug-in looks in firefox browser: 
+## How the plug-in looks in firefox browser:
+
 ![Browser plug-in](https://github.com/shashank136/Secure-and-random-Password-Generator/blob/master/res/img/demo.png)
 
-How the data is stored in the firebase:
+## How the data is stored in the firebase:
+
 ![Browser plug-in](https://github.com/shashank136/Secure-and-random-Password-Generator/blob/master/res/img/db.png)
+
+User credentials are stored in the encrypted format.
 
 Works through browser plug-ins
 
@@ -71,6 +75,16 @@ Add the above code to your manifest.json file. Here you can request for range of
 1) Create a google account and log into google firebase.
 2) Follow the instruction to create firestone database.[firestone](https://firebase.google.com/docs/firestore/quickstart?authuser=0).
 3) Keep in mind you need to start in test mode.
+4) Update the below code with your firebase database details inside the file firebase.function.js file.
+```json
+
+	//Firebase configurations (USERS HAVE TO UPDATE THE BELOW DETAILS WITH THEIR OWN FIREBASE PROJECT DETAILS)
+    firebase.initializeApp({
+        apiKey: "AIzaSyDwKUw_WudafwfAPYBmhhaMizMRfSYgtG8",
+        authDomain: "password-9d02f.firebaseapp.com",
+        projectId: "password-9d02f"
+    });
+```
 
 # HOW TO USE
 
