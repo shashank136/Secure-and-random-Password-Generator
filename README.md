@@ -5,7 +5,11 @@ Protect passwords with 3 levels of best encryption techniques applied to safe gu
 
 # Images:
 
+How the plug-in looks in firefox browser: 
 ![Browser plug-in](https://github.com/shashank136/Secure-and-random-Password-Generator/blob/master/res/img/demo.png)
+
+How the data is stored in the firebase:
+![Browser plug-in](https://github.com/shashank136/Secure-and-random-Password-Generator/blob/master/res/img/db.png)
 
 Works through browser plug-ins
 
