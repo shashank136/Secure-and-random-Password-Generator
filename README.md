@@ -57,8 +57,7 @@ Protect passwords with 3 levels of best encryption techniques applied to safe gu
 * Make sure manifest.json file in the root directory of project has manifest_version is 2.
 
 	>Inside manifest.json we have  the following code
-
-	>```json
+	```json
 		{
 			"manifest_version":2,
 			"name": "SecureKey",
@@ -73,7 +72,7 @@ Protect passwords with 3 levels of best encryption techniques applied to safe gu
 				"default_popup": "html/index.html"
 			}
 		}
-	>```
+	```
 
 * For facility to access some browser information which is not available in a regular browser app, such as the ability to access an opened window and retrieve all of it’s opened tabs.
 
