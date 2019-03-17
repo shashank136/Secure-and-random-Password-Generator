@@ -5,8 +5,13 @@ Protect passwords with 3 levels of best encryption techniques applied to safe gu
 
 ## How the plug-in looks in firefox browser:
 
-![gif](https://github.com/shashank136/Secure-and-random-Password-Generator/blob/master/res/img/DeAsuD7J2U.gif)
+### Creating and saving a secure password
 
+![gif](https://github.com/shashank136/Secure-and-random-Password-Generator/blob/master/res/img/save.gif)
+
+### Fetching the secure password for login
+
+![gif](https://github.com/shashank136/Secure-and-random-Password-Generator/blob/master/res/img/get.gif)
 
 ## Features:
 
