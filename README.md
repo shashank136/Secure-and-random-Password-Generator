@@ -47,7 +47,7 @@ Protect passwords with 3 levels of best encryption techniques applied to safe gu
         projectId: "password-9d02f"
     });
 ```
-* Enable plug-n support for the browsers:
+* Enable plug-in support for the browsers:
 	* For plug-in **firefox browser**, load the manifest.json file into the firefox from **about:debugging**(enter this in the address bar and hit enter) section by clicking on **Load Temporary Add-on**.
 
 	* If on **chrome browser** then visit chrome://extensions in your browser and ensure that the Developer mode checkbox in the top right-hand corner is checked.Click **Load unpacked extension** and select the directory in which your extension files live.
