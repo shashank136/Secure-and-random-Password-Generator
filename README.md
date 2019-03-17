@@ -56,24 +56,24 @@ Protect passwords with 3 levels of best encryption techniques applied to safe gu
 
 * Make sure manifest.json file in the root directory of project has manifest_version is 2.
 
-* Inside manifest.json add the following code
+	>Inside manifest.json we have  the following code
 
-```json
-	{
-		"manifest_version":2,
-		"name": "SecureKey",
-		"version": "1.0.0",
-		"author": "Shashank",
-		"icon": {
-			"48": "res/img/icon.png"
-		},
-		"browser_action": {
-			"default_icon": "res/img/icon.png",
-			"default_title": "Secure Key",
-			"default_popup": "html/index.html"
+	>```json
+		{
+			"manifest_version":2,
+			"name": "SecureKey",
+			"version": "1.0.0",
+			"author": "Shashank",
+			"icon": {
+				"48": "res/img/icon.png"
+			},
+			"browser_action": {
+				"default_icon": "res/img/icon.png",
+				"default_title": "Secure Key",
+				"default_popup": "html/index.html"
+			}
 		}
-	}
-```
+	>```
 
 * For facility to access some browser information which is not available in a regular browser app, such as the ability to access an opened window and retrieve all of it’s opened tabs.
 
