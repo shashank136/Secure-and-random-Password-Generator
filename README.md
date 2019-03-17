@@ -5,7 +5,7 @@ Protect passwords with 3 levels of best encryption techniques applied to safe gu
 
 ## How the plug-in looks in firefox browser:
 
-![gif](g.recordit.co/DeAsuD7J2U.gif)
+![gif](img/DeAsuD7J2U.gif)
 
 User credentials are stored in the encrypted format.
 
